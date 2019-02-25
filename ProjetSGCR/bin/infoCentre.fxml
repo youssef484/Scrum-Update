@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLcontrollerInfoCentre">
+   <children>
+      <Label fx:id="lblTitle" layoutX="109.0" layoutY="14.0" prefHeight="18.0" prefWidth="451.0" text="Personnaliser le Centre de Radiologie">
+         <font>
+            <Font name="Averia-Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInfo" layoutX="60.0" layoutY="83.0" prefHeight="15.0" prefWidth="548.0" text="Les informations suivantes seront affichées dans les documents générés par l'application">
+         <font>
+            <Font name="Averia-Regular" size="13.0" />
+         </font>
+      </Label>
+      <Line endX="-100.0" endY="396.5" layoutX="512.0" layoutY="127.0" startX="-100.0" />
+      <Label fx:id="lblNom" layoutX="46.0" layoutY="156.0" text="Nom:" />
+      <Label fx:id="lblMail" layoutX="45.0" layoutY="210.0" text="Email:" />
+      <Label fx:id="lblPhone" layoutX="45.0" layoutY="266.0" text="Téléphone:" />
+      <Label fx:id="lblFax" layoutX="50.0" layoutY="320.0" text="Fax:" />
+      <Label fx:id="lblAdresse" layoutX="52.0" layoutY="378.0" text="Adresse:" />
+      <Label fx:id="lblCP" layoutX="41.0" layoutY="436.0" text="Code Postal :" />
+      <TextField fx:id="txtNom" layoutX="159.0" layoutY="152.0" />
+      <TextField fx:id="txtMail" layoutX="159.0" layoutY="206.0" />
+      <TextField fx:id="txtPhone" layoutX="159.0" layoutY="262.0" promptText="Exemple : +216 25080060" />
+      <TextField fx:id="txtFax" layoutX="159.0" layoutY="316.0" />
+      <TextField fx:id="txtAdresse" layoutX="159.0" layoutY="374.0" />
+      <TextField fx:id="txtCP" layoutX="159.0" layoutY="432.0" />
+      <Label fx:id="errNom" layoutX="80.0" layoutY="177.0" prefHeight="17.0" prefWidth="314.0" textFill="RED" />
+      <Label fx:id="errMail" layoutX="74.0" layoutY="231.0" prefHeight="17.0" prefWidth="314.0" textFill="RED" />
+      <Label fx:id="errPhone" layoutX="69.0" layoutY="292.0" prefHeight="17.0" prefWidth="314.0" textFill="RED" />
+      <Label fx:id="errFax" layoutX="76.0" layoutY="341.0" prefHeight="17.0" prefWidth="305.0" textFill="RED" />
+      <Label fx:id="errAdresse" layoutX="68.0" layoutY="407.0" prefHeight="17.0" prefWidth="249.0" textFill="RED" />
+      <Label fx:id="errCP" layoutX="68.0" layoutY="465.0" prefHeight="17.0" prefWidth="293.0" textFill="RED" />
+      <Button fx:id="btnValider" layoutX="348.0" layoutY="552.0" mnemonicParsing="false" onAction="#nameFormatCheck" prefHeight="28.0" prefWidth="69.0" styleClass="btnStyle" stylesheets="@btnstyle.css" text="Valider" textFill="WHITE" />
+      <Button fx:id="btnAnnuler" layoutX="481.0" layoutY="552.0" mnemonicParsing="false" onAction="#closeW" prefHeight="28.0" prefWidth="69.0" styleClass="btnStyle" stylesheets="@btnstyle.css" text="Annuler" textFill="WHITE" />
+      <ChoiceBox fx:id="dbPay" layoutX="497.0" layoutY="424.0" prefHeight="25.0" prefWidth="126.0" />
+      <Line endX="518.0" layoutX="132.0" layoutY="524.0" startX="-138.5" />
+      <Label fx:id="lblPays" layoutX="439.0" layoutY="428.0" prefHeight="17.0" prefWidth="44.0" text="Pays :" />
+      <CheckBox fx:id="chbox" layoutX="474.0" layoutY="474.0" mnemonicParsing="false" text="associer CNAM" />
+      <ImageView fx:id="imgC" fitHeight="191.0" fitWidth="226.0" layoutX="435.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@femdoc.png" />
+         </image></ImageView>
+      <Button fx:id="btnImporter" layoutX="499.0" layoutY="362.0" mnemonicParsing="false" onAction="#onClickImportImg" styleClass="btnStyle" stylesheets="@btnstyle.css" text="Importer" textFill="WHITE" />
+   </children>
+</Pane>
